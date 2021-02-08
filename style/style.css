@@ -1,0 +1,227 @@
+body {
+    background-color: #000;
+}
+
+
+/* Works on Chrome/Edge/Safari */
+
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ff9e09;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #e61f18;
+    border-radius: 20px;
+    border: 3px solid #ff9e09;
+}
+
+.heading {
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.main-roadMap {
+    padding-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-roadMap:before {
+    content: "";
+    width: 7px;
+    height: 100%;
+    background: #e61f18;
+    margin: 0 auto;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0
+}
+
+.main-roadMap .roadMap {
+    width: 50%;
+    float: left;
+    padding: 20px 60px;
+    border-top: 7px solid #e61f18;
+    border-right: 7px solid #e61f18;
+    border-radius: 0 30px 0 0;
+    position: relative;
+    right: -3.5px;
+}
+
+.main-roadMap .icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background: #e61f18;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    box-shadow: 0 0 0 2px #e61f18;
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.main-roadMap .roadMap-content {
+    display: block;
+    padding: 30px 20px;
+    border-radius: 0 30px 0px 30px;
+    background: #e61f18;
+    color: #fff;
+    position: relative;
+}
+
+.main-roadMap .roadMap-content:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-roadMap .roadMap-content:after,
+.main-roadMap .roadMap-content:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 50px;
+    border-radius: 10px;
+    background: #e61f18;
+    border: 1px solid #fff;
+    position: absolute;
+    top: -35px;
+    left: 50px;
+}
+
+.main-roadMap .roadMap-content:after {
+    left: auto;
+    right: 50px;
+}
+
+.main-roadMap .title {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.main-roadMap .description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin: 0 0 5px;
+    /* padding-top: 10px; */
+}
+
+.main-roadMap .roadMap:nth-child(2n) {
+    border-right: none;
+    border-left: 7px solid #e61f18;
+    border-radius: 30px 0 0;
+    right: auto;
+    left: -3.5px;
+}
+
+.main-roadMap .roadMap:nth-child(2n) .icon {
+    left: auto;
+    right: 0;
+    box-shadow: 0 0 0 2px #e61f18;
+}
+
+.main-roadMap .roadMap:nth-child(2) {
+    margin-top: 130px;
+}
+
+.main-roadMap .roadMap:nth-child(odd) {
+    margin: -130px 0 30px;
+}
+
+.main-roadMap .roadMap:nth-child(even) {
+    margin-bottom: 80px;
+}
+
+.main-roadMap .roadMap:first-child,
+.main-roadMap .roadMap:last-child:nth-child(even) {
+    margin: 0 0 30px;
+}
+
+.main-roadMap .roadMap:nth-child(2n) .icon,
+.main-roadMap .roadMap:nth-child(2n) .roadMap-content,
+.main-roadMap .roadMap:nth-child(2n) .roadMap-content:after,
+.main-roadMap .roadMap:nth-child(2n) .roadMap-content:before {
+    background: #ff6004;
+}
+
+.main-roadMap .roadMap:nth-child(3n) .icon,
+.main-roadMap .roadMap:nth-child(3n) .roadMap-content,
+.main-roadMap .roadMap:nth-child(3n) .roadMap-content:after,
+.main-roadMap .roadMap:nth-child(3n) .roadMap-content:before {
+    background: #ff6004;
+}
+
+.main-roadMap .roadMap:nth-child(3n) .icon {
+    box-shadow: 0 0 0 2px#ff6004
+}
+
+.main-roadMap .roadMap:nth-child(4n) .icon,
+.main-roadMap .roadMap:nth-child(4n) .roadMap-content,
+.main-roadMap .roadMap:nth-child(4n) .roadMap-content:after,
+.main-roadMap .roadMap:nth-child(4n) .roadMap-content:before {
+    background: #e61f18;
+}
+
+.main-roadMap .roadMap:nth-child(4n) .icon {
+    box-shadow: 0 0 0 2px #e61f18;
+}
+
+.footer-text {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width:767px) {
+    .main-roadMap:before {
+        left: 0;
+        right: auto;
+    }
+    .main-roadMap .roadMap,
+    .main-roadMap .roadMap:nth-child(even),
+    .main-roadMap .roadMap:nth-child(odd) {
+        width: 100%;
+        float: none;
+        padding: 20px 30px;
+        margin: 0 0 30px;
+        border-right: none;
+        border-left: 7px solid #e61f18;
+        border-radius: 30px 0 0;
+        right: auto;
+        left: 0;
+    }
+    .main-roadMap .icon {
+        left: auto;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .main-roadMap .title {
+        font-size: 18px;
+    }
+}
+
+.footer-text {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+}
